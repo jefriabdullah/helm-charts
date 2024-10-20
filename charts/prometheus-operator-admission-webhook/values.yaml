@@ -45,16 +45,16 @@ jobs:
   securityContext: {}
 
   ## containerSecurityContext sets security context for containers
-  containerSecurityContext:
-    allowPrivilegeEscalation: false
-    capabilities:
-      drop: ["ALL"]
-    readOnlyRootFilesystem: true
-    runAsGroup: 10000
-    runAsNonRoot: true
-    runAsUser: 10000
-    seccompProfile:
-      type: RuntimeDefault
+  # containerSecurityContext:
+  #   allowPrivilegeEscalation: false
+  #   capabilities:
+  #     drop: ["ALL"]
+  #   readOnlyRootFilesystem: true
+  #   runAsGroup: 10000
+  #   runAsNonRoot: true
+  #   runAsUser: 10000
+  #   seccompProfile:
+  #     type: RuntimeDefault
 
   ## image sets image-related parameters for jobs' containers
   image:
@@ -213,20 +213,20 @@ serviceAccount:
 
 ## securityContext for pod
 ## Ref. https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
-securityContext:
-  fsGroup: 2000
+# securityContext:
+#   fsGroup: 2000
 
 ## containerSecurityContext sets security context for container
-containerSecurityContext:
-  allowPrivilegeEscalation: false
-  capabilities:
-    drop: ["ALL"]
-  readOnlyRootFilesystem: true
-  runAsGroup: 1000
-  runAsNonRoot: true
-  runAsUser: 1000
-  seccompProfile:
-    type: RuntimeDefault
+# containerSecurityContext:
+#   allowPrivilegeEscalation: false
+#   capabilities:
+#     drop: ["ALL"]
+#   readOnlyRootFilesystem: true
+#   runAsGroup: 1000
+#   runAsNonRoot: true
+#   runAsUser: 1000
+#   seccompProfile:
+#     type: RuntimeDefault
 
 ## livenessProbe sets liveness probe parameters
 ## Ref. https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
